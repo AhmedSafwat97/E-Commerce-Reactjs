@@ -3,6 +3,30 @@ Home / Product Listing page - (Home: Can add to cart from here)
 categries Pages  / Product Listing page - (Home: Can add to cart from here)
 Product Details page (ProductDetailsPage: Can add to cart from here)
 Shopping Cart page (ShoppingCart: Can update cart from here. Only quantity can be updated)
+using : 
+react hooks
+css
+bootstrap
+packages : 
+react router dom :
+"https://reactrouter.com/en/main"
+bootstrap :
+"https://getbootstrap.com/docs/5.2/getting-started/introduction/"
+react-bootstrap :
+"https://react-bootstrap.github.io"
+react-icons :
+"https://react-icons.github.io/react-icons/"
+react-toastify :
+"https://www.npmjs.com/package/react-toastify"
+axios :
+"https://www.npmjs.com/package/axios"
+react-redux-toolkit :
+"https://redux-toolkit.js.org"
+Aos-scroll-animations :
+"https://michalsnik.github.io/aos/"
+Api : 
+fakwstore :
+"https://fakestoreapi.com"
 
 Available Scripts
 In the project directory, you can run:
