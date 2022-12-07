@@ -25,7 +25,7 @@ react-redux-toolkit :
 Aos-scroll-animations :
 "https://michalsnik.github.io/aos/"
 Api : 
-fakwstore :
+fakestore :
 "https://fakestoreapi.com"
 
 Available Scripts
