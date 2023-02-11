@@ -10,6 +10,9 @@ import { addtocart } from "../../Store/cartslice";
 import Footer from "../footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Proslider from "../products/Proslider";
+
+
 function Prodetails(props) {
   const location = useLocation();
   console.log(location);
@@ -34,54 +37,61 @@ function Prodetails(props) {
 
   return (
     <>
-      <div className="cartpage">
-        <div data-aos="fade-left" className="all-d">
-          <div className="d-pro">
-            <div className="img-d">
-              <Card.Img
-                className="d-card"
-                variant="top"
-                src={product.image}
-                style={{ width: "20rem", hight: "20rem" }}
-              />
-            </div>
-            <div className="contnt-d">
-              <h5>{product.category}</h5>
-              <div className="d-cardText">
-                <h3>{product.title}</h3>
-                <div className="rate">
-                  <h3>4.5</h3>
-                  <AiTwotoneStar
-                    style={{ color: "yellow", fontSize: "20px" }}
-                  />
-                  <h5 className="mx-3">200</h5>
+    <div style={{display :"block"}}>
+        <div className="cartpage">
+          <div data-aos="fade-left" className="all-d">
+            <div className="d-pro">
+              <div className="img-d">
+                <Card.Img
+                  className="d-card"
+                  variant="top"
+                  src={product.image}
+                  style={{ width: "20rem", hight: "20rem" }}
+                />
+              </div>
+              <div className="contnt-d">
+                <h5>{product.category}</h5>
+                <div className="d-cardText">
+                  <h3>{product.title}</h3>
+                  <div className="rate">
+                    <h3>4.5</h3>
+                    <AiTwotoneStar
+                      style={{ color: "yellow", fontSize: "20px" }}
+                    />
+                    <h5 className="mx-3">200</h5>
+                  </div>
+                  <h5>${product.price}</h5>
+                  <p style={{ width: "80%" }}>{product.description}</p>
                 </div>
-                <h5>${product.price}</h5>
-                <p style={{ width: "80%" }}>{product.description}</p>
               </div>
             </div>
           </div>
+          <div className="d-to-cart" data-aos="fade-right">
+            <h5>
+              Price : <h5>${product.price}</h5>
+            </h5>
+            <p>
+              Delivery December 8 - 25 Or fastest delivery Friday, December 16.
+              Order within 6 hrs 45 mins
+            </p>
+            <button
+              className="btn btn-success"
+              onClick={() => dispatch(addtocart(product))}>
+              Add To Cart
+            </button>
+            <p className="my-3">
+              Return policy: Returnable until Jan 31, 2023 Add a gift receipt for
+              easy returns
+            </p>
+          </div>
         </div>
-        <div className="d-to-cart" data-aos="fade-right">
-          <h5>
-            Price : <h5>${product.price}</h5>
-          </h5>
-          <p>
-            Delivery December 8 - 25 Or fastest delivery Friday, December 16.
-            Order within 6 hrs 45 mins
-          </p>
-          <button
-            className="btn btn-success"
-            onClick={() => dispatch(addtocart(product))}>
-            Add To Cart
-          </button>
-          <p className="my-3">
-            Return policy: Returnable until Jan 31, 2023 Add a gift receipt for
-            easy returns
-          </p>
-        </div>
-      </div>
-      <Footer />
+          <div style={{width:"100%" , display:"flex" , flexDirection:"column" , alignItems:"center"}}>
+              <h2>Similar Products</h2>
+              <Proslider/>
+      
+          </div>
+    </div >
+        <Footer />
     </>
   );
 }

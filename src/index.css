@@ -13,12 +13,11 @@ code {
 }
 
 /* for Navigation componant */
-.carts-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
+a.active{
+  background-color: blue;
+  color: white;
+  padding: 5px 10px ;
+  border-radius: 6px;
 }
 .Head{
   position: sticky;
@@ -44,11 +43,10 @@ code {
   border: 1px solid black;
   border-radius: 10px;
   background-color: white;
-  overflow: hidden;
 }
 .img-card{
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 .img-card:hover{
   transform: scale(1.1);
@@ -160,9 +158,7 @@ transform: translateX(0px);
     margin-right: 10px;
     transform: scale(0.8);
   }
-  .container{
-    transform: scale(0.7);
-  }
+
   .d-pro{
     display: flex;
     flex-direction: column;
@@ -184,10 +180,7 @@ transform: translateX(0px);
     flex-direction: column;
   }
   .allpage{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     }
     .order{
       width: 200px;
@@ -354,10 +347,41 @@ margin: 20px 0;
   height: 250px;
 }
 .to-cart{
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.carts-container{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.carts-slider{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  transition: 2s;
+  position: relative;
+}
+.slider{
+  display: flex;
+}
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 45% ;
+  z-index: 2;
+}
+.buttons button{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
 }
 
 /* for sign componant */
@@ -476,6 +500,7 @@ margin: 0 10px;
     display: flex;
     align-items: baseline;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 30px;
     }
     .order{

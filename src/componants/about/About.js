@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+
 function About() {
   useEffect(() => {
     AOS.init({ duration: 2500 });

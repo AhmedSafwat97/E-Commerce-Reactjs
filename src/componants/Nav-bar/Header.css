@@ -1,0 +1,77 @@
+/* for Navigation componant */
+a.active{
+    background-color: blue;
+    color: white;
+    padding: 5px 10px ;
+    border-radius: 6px;
+  }
+  .Head{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+  }
+  .all-nav{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link{
+    text-decoration: none;
+    color: black;
+  }
+  .the-card{
+    width: 300px;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .img-card{
+    width: 100%;
+    height: 250px;
+  }
+  .img-card:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  .cardText {
+    margin:10px 0;
+  }
+  .cardText h3{
+    font-size: 15px;
+    height:30px;
+  }
+  
+  .search-nav{
+    width: 500px;
+    position: relative;
+  }
+  .icon-search{
+    font-size: 20px;
+    position: absolute;
+    left: 90%;
+  }
+  .button a {
+    font-size: 18px;
+  }
+  .Mobile-nav{
+    display: none;
+  }
+  
+  .Mopile-Nav{
+    display: none;
+  }
+  .search-mop{
+    display: none;
+  }
+  
+@media (max-width:  900px) {
+
+  .h-list{display: block;}
+
+
+}  

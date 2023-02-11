@@ -7,8 +7,6 @@ import Jewelery from "./componants/products/Jewelery";
 import Mens from "./componants/products/Mens";
 import Women from "./componants/products/women";
 import Electronice from "./componants/products/Electronice";
-import Sign from "./Sign Up/Sign";
-import Newacc from "./Sign Up/Newacc";
 import Allpro from "./componants/products/Allpro";
 import Cart from "./componants/Cart/Cart";
 import Prodetails from "./componants/products/Prodetails";
@@ -31,9 +29,7 @@ function App() {
           <Route path="/jewelery" exact element={<Jewelery />} />
           <Route path="/electronices" exact element={<Electronice />} />
           <Route path="/allpro" exact element={<Allpro />} />
-          <Route path="sign" exact element={<Sign />} />
           <Route path="/prodetails/:id" exact element={<Prodetails />} />
-          <Route path="newaccount" exact element={<Newacc />} />
           <Route path="/viewcart" exact element={<Cart />} />
         </Routes>
       </Router>

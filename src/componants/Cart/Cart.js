@@ -14,7 +14,6 @@ import { incre } from "../../Store/cartslice";
 import { decre } from "../../Store/cartslice";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 const Cart = () => {
   const cart = useSelector((state) => state.cart.Cartitem);
 

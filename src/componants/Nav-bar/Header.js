@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "@react-icons/all-files/ai/AiOutlineShoppingCart";
 import { RiUserAddFill } from "@react-icons/all-files/ri/RiUserAddFill";
 import { FiSearch } from "@react-icons/all-files/fi/FiSearch";
@@ -76,30 +77,30 @@ export default function Navigation() {
                 </button>
               </div>
 
-              <Link to="/" className="link mx-3">
+              <NavLink to="/" className="link mx-3">
                 Home
-              </Link>
+              </NavLink>
               <h4>Categories</h4>
               <span className="LineM"></span>
-              <Link to="/men's" className="link mx-3">
+              <NavLink to="/men's" className="link mx-3">
                 Men's
-              </Link>
-              <Link to="/women's" className="link mx-3">
+              </NavLink>
+              <NavLink to="/women's" className="link mx-3">
                 Women's
-              </Link>
-              <Link to="/electronices" className="link mx-3">
+              </NavLink>
+              <NavLink to="/electronices" className="link mx-3">
                 Electronices
-              </Link>
-              <Link to="/jewelery" className="link mx-3">
+              </NavLink>
+              <NavLink to="/jewelery" className="link mx-3">
                 Jewelery
-              </Link>
+              </NavLink>
               <span className="LineM"></span>
-              <Link to="/about" className="link mx-3">
+              <NavLink to="/about" className="link mx-3">
                 About
-              </Link>
-              <Link to="/contact" className="link mx-3">
+              </NavLink>
+              <NavLink to="/contact" className="link mx-3">
                 Contact
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -126,40 +127,39 @@ export default function Navigation() {
           </Form>
           <div
             className="Nav-bar d-flex me-auto mx-auto my-2 my-lg-0  fs-5"
-            style={{ maxHeight: "100px" }}
-            navbarScroll>
-            <Link to="/" className="link mx-3">
+            style={{ maxHeight: "100px" }}>
+            <NavLink to="/" className="link mx-3">
               Home
-            </Link>
+            </NavLink>
             <NavDropdown title="Categories" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">
-                <Link to="/men's" className="link mx-3">
+                <NavLink to="/men's" className="link mx-3">
                   Men's
-                </Link>
+                </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="/women's" className="link mx-3">
+                <NavLink to="/women's" className="link mx-3">
                   Women's
-                </Link>
+                </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-                <Link to="/electronices" className="link mx-3">
+                <NavLink to="/electronices" className="link mx-3">
                   Electronices
-                </Link>
+                </NavLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="/jewelery" className="link mx-3">
+                <NavLink to="/jewelery" className="link mx-3">
                   Jewelery
-                </Link>
+                </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
-            <Link to="/about" className="link mx-3">
+            <NavLink to="/about" className="link mx-3">
               About
-            </Link>
-            <Link to="/contact" className="link mx-3">
+            </NavLink>
+            <NavLink to="/contact" className="link mx-3">
               Contact
-            </Link>
+            </NavLink>
           </div>
           <div className="button">
             <Link to="sign" className="link">
