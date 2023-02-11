@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
@@ -8,7 +7,6 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaPinterestP } from "@react-icons/all-files/fa/FaPinterestP";
 import { FaApple } from "@react-icons/all-files/fa/FaApple";
 import { FaGooglePlay } from "@react-icons/all-files/fa/FaGooglePlay";
-
 function Footer() {
   return (
     <>
