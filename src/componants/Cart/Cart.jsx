@@ -14,6 +14,10 @@ import { incre } from "../../Store/cartslice";
 import { decre } from "../../Store/cartslice";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Box, Button, Typography } from "@mui/material";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 const Cart = () => {
   const cart = useSelector((state) => state.cart.Cartitem);
 
@@ -34,85 +38,85 @@ const Cart = () => {
   }, []);
   return (
     <>
-      <div className="allpage">
-        <div data-aos="fade-left" className="cart-Container">
-          <div className="thetitle">
-            <h2>
+      <Box component="main" className="allpage">
+        <Box data-aos="fade-left" className="cart-Container">
+          <Box className="thetitle">
+            <Typography variant="h5">
               <AiOutlineShoppingCart /> Shopping Cart
-            </h2>
-            <button
+            </Typography>
+            <Button
               className="btn btn-danger mx-4 clear"
               onClick={() => dispatch(clearthecart())}>
               Clear Cart
-            </button>
-          </div>
+            </Button>
+          </Box>
           {cart.map((product) => {
             return (
               <>
-                <div className="cart" key={product.id}>
-                  <Card.Img
+                <Box className="cart" key={product.id}>
+                  <img
                     className="img-cart mx-3"
                     style={{ width: "100px", height: "100px" }}
                     variant="top"
                     src={product.image}
+                    alt=""
                   />
-                  <div className="pro-name">{product.title}</div>
-                  <div className="Quantity mx-4">
-                    <button
+                  <Box className="pro-name">{product.title}</Box>
+                  <Box className="Quantity mx-4">
+                    <Button
                       className="btn btn-outline-dark"
                       onClick={() => {
                         dispatch(decre(product));
                       }}>
                       -
-                    </button>
-                    <h5 className="mx-3">{product.cartQuantity}</h5>
-                    <button
+                    </Button>
+                    <Typography variant="h5" className="mx-3">{product.cartQuantity}</Typography>
+                    <Button
                       className="btn btn-outline-dark"
                       onClick={() => {
                         dispatch(incre(product));
                       }}>
                       +
-                    </button>
-                  </div>
-                  <h5 style={{ width: "100px" }}>${product.price}</h5>
-                  <button
-                    className="btn btn-danger mx-4"
+                    </Button>
+                  </Box>
+                  <Typography variant="h5" style={{ width: "100px" }}>${product.price}</Typography>
+                  <Button ariant="outlined" startIcon={<DeleteIcon/>}
+                  sx={{bgcolor : "red" , color : "white" }}
                     onClick={() => dispatch(removefromcart(product))}>
                     Remove
-                  </button>
-                </div>
+                  </Button>
+                </Box>
               </>
             );
           })}
-        </div>
-        <div data-aos="fade-right" className="order">
-          <div className="summary">
-            <h3 className="mx-5">Order Summary</h3>
+        </Box>
+        <Box data-aos="fade-right" className="order">
+          <Box className="summary">
+            <Typography variant="h5" className="mx-5">Order Summary</Typography>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Coupon</Form.Label>
               <Form.Control type="text" placeholder="Enter Your Coupon" />
             </Form.Group>
-            <div className="Row">
-              <p>Subtotal</p>
-              <div className="total">
-                <h5>${subtotalprice.toFixed(2)}</h5>
-              </div>
-            </div>
-            <div className="Row">
-              <p>Standard Shipping</p>
+            <Box className="Row">
+              <Typography variant="p">Subtotal</Typography>
+              <Box className="total">
+                <Typography variant="p">${subtotalprice.toFixed(2)}</Typography>
+              </Box>
+            </Box>
+            <Box className="Row">
+              <Typography variant="p">Standard Shipping</Typography>
               <h6>$30</h6>
-            </div>
-            <div className="Row">
-              <h5>Total</h5>
-              <h5>${totalprice.toFixed(2)}</h5>
-            </div>
-          </div>
-          <button className="check btn btn-danger">
-            Checkout <h6>${totalprice.toFixed(2)}</h6>
-          </button>
-        </div>
-      </div>
-      <Footer />
+            </Box>
+            <Box className="Row">
+              <Typography variant="h5">Total</Typography>
+              <Typography variant="h5">${totalprice.toFixed(2)}</Typography>
+            </Box>
+          </Box>
+          <Button sx={{my : "10px"}} variant="contained" color="success" >
+            Checkout {totalprice.toFixed(2)}
+          </Button>
+        </Box>
+      </Box>
     </>
   );
 };
